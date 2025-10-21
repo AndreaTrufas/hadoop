@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  hadoop:
+    image: stephanederrode/docker-cluster-hadoop-spark-python-8:3.5
+    container_name: hadoop
+    hostname: hadoop
+    tty: true
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+      - "4040:4040"
+    volumes:
+      - ./workspace:/workspace
+    command: ["/bin/bash", "-lc", "echo '127.0.0.1 hadoop-master' >> /etc/hosts && tail -f /dev/null && service ssh start"]

@@ -1,0 +1,3 @@
+Hola Hadoop
+Hola mundo
+Hadoop Hadoop con mrjob es chévere
